@@ -1,0 +1,93 @@
+:root {
+  --color-gray-900: #48556a;
+  --color-gray-500: #6e8098;
+  --color-gray-400: #9daec2;
+  --color-gray-200: #ecf2f8;
+
+  --fs-pr1: 2rem;
+  --lh-pr1: 1.3;
+
+  --fs-pr2: 1.4rem;
+  --lh-pr2: 1.4;
+  --ls-pr3: 25%;
+
+  --fs-pr3: 1.3rem;
+  --lh-pr3: 1.4;
+  --ls-pr3: 25%;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Manrope", serif;
+  background-color: var(--color-gray-400);
+}
+/* icons */
+.icon {
+  width: 2rem;
+  height: 2rem;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.facebook--icon {
+  background-image: url(../images/icon-facebook.svg);
+}
+.pintrest--icon {
+  background-image: url(../images/icon-pinterest.svg);
+}
+.twiter--icon {
+  background-image: url(../images/icon-twitter.svg);
+}
+
+/* share toast component */
+
+.share--toast {
+  position: relative;
+  margin: 0rem;
+  display: flex;
+  padding: 1.8rem 3.8rem;
+  background-color: var(--color-gray-900);
+  gap: 2.4rem;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0 0 1rem 1rem;
+}
+
+.share--toast .triangle {
+  display: none;
+  position: absolute;
+  bottom: -2.2rem;
+  left: 40%;
+  width: 0;
+  height: 0;
+  border-left: 24px solid transparent;
+  border-right: 24px solid transparent;
+  border-top: 24px solid var(--color-gray-900);
+}
+
+.share--social {
+  display: flex;
+  gap: 1.6rem;
+}
+
+.share--title {
+  color: var(--color-gray-400);
+  line-height: var(--lh-pr3);
+  font-size: var(--fs-pr3);
+  letter-spacing: 0.5rem;
+}
+
+@media screen and (min-width: 40rem) {
+  .share--toast {
+    border-radius: 1rem;
+    max-width: 24rem;
+  }
+  .share--toast .triangle {
+    display: block;
+  }
+}
