@@ -6,13 +6,17 @@ activeBtns.forEach((btn) => {
   console.log("first");
   btn.addEventListener("click", (e) => {
     if (btn.classList.contains("btn--primery")) {
-      shareOption.classList.add("active");
-      btn.classList.add("btn--secondery");
-      btn.classList.remove("btn--primery");
+      activeBtns.forEach((btn) => {
+        shareOption.classList.add("active");
+        btn.classList.add("btn--secondery");
+        btn.classList.remove("btn--primery");
+      });
     } else if (btn.classList.contains("btn--secondery")) {
-      shareOption.classList.remove("active");
-      btn.classList.add("btn--primery");
-      btn.classList.remove("btn--secondery");
+      activeBtns.forEach((btn) => {
+        shareOption.classList.remove("active");
+        btn.classList.add("btn--primery");
+        btn.classList.remove("btn--secondery");
+      });
     }
   });
 });

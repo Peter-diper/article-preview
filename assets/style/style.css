@@ -36,6 +36,10 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  transition: transform 0.2s;
+}
+.icon:hover {
+  transform: translateY(-4px);
 }
 
 .facebook--icon {
@@ -55,10 +59,12 @@ body {
   right: 0;
   opacity: 0;
   width: 100%;
-  height: 0px;
+  height: 0rem;
+  max-height: 0rem;
   overflow: hidden;
   z-index: 10000;
-  transition: all 0.3s ease-in-out;
+  transform: translateY(1rem);
+  transition: opacity 0.3s ease-in-out, transform 0.2s ease-in-out;
 }
 
 .share--toast {
@@ -138,7 +144,7 @@ body {
   border-radius: 100%;
   outline: 0;
   border: 0;
-  transition: all 0.3s;
+  transition: background-color 0.3s;
 }
 
 .btn--primery {
@@ -148,12 +154,6 @@ body {
 .btn--primery svg {
   fill: var(--color-gray-500);
 }
-.btn--primery:hover svg {
-  fill: var(--color-gray-200);
-}
-.btn--primery:hover {
-  background-color: var(--color-gray-500);
-}
 
 .btn--secondery {
   background-color: var(--color-gray-500);
@@ -161,14 +161,6 @@ body {
 
 .btn--secondery svg {
   fill: var(--color-gray-200);
-}
-
-.btn--secondery:hover svg {
-  fill: var(--color-gray-500);
-}
-
-.btn--secondery:hover {
-  background-color: var(--color-gray-200);
 }
 
 /* profile section */
@@ -277,9 +269,11 @@ body {
 }
 
 /* activation */
-.active {
+.active.share--toast--block {
   height: auto;
   overflow: visible;
-  max-width: 100vh;
+  height: auto;
+  max-height: 100vh;
   opacity: 1;
+  transform: translateY(0);
 }
